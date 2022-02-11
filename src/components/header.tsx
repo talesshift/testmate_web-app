@@ -3,6 +3,8 @@ import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 
 export class Header extends React.Component<{logo: string}, {}>{
     
+    /* const [style, setStyle] = useState({display: 'none'}); */
+
     render() {
         return(
             <nav className='navbar'>
@@ -12,20 +14,20 @@ export class Header extends React.Component<{logo: string}, {}>{
                     </div>
                     <div className='navbar__pages'>
                         <div className='navbar__page'><a href="#">platform</a></div>
-                        <div className='navbar__page'>
-                            <a href="#">services</a>
-                        </div>
+                        <div className='navbar__page'><a href="#">services</a></div>
                         <div className='navbar__page'><a href="#">roles</a></div>
                         <div className='navbar__page'><a href="#">resources</a></div>
                         <div className='navbar__page'><a href="#">contact</a></div>
                         <div className='navbar__page'><a href="#">abou us</a></div>
                     </div>
                     <div className='navbar__buttons'>
-                        <button className='navbar__button--login' >Login</button>
-                        <button className='navbar__button--call' >Book a free call</button>
+                        <button className='navbar__button navbar__button--login' >Login</button>
+                        <button className='navbar__button navbar__button--call' >Book a free call</button>
                     </div>
                 </div>
             </nav>
         )
     }
 }
+
+
