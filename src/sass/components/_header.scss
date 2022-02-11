@@ -1,0 +1,102 @@
+$padding_menu:4.1rem;
+$menuheight:45px;
+$logo_offset:4px;
+
+.navbar{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+
+  .navbar__container{
+    margin-top: 109px;
+    width: $max-width;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .navbar__logo{
+    background-color:none;
+    padding: 0;
+    height: $menuheight;
+    margin-left: 0.8rem;
+
+    img{
+      object-fit: cover;  
+      height: calc($menuheight - $logo_offset);
+      margin-top: calc($logo_offset/2);
+    }
+
+  } 
+
+  .navbar__pages{
+    flex:1;
+    display: flex;
+    justify-content: space-around;
+    max-width: 655px;
+    margin: 0 1rem;
+
+    .navbar__page{
+      display: inline-block;
+      a{
+        text-transform: capitalize;
+        font-weight:300;
+        color:$lightgrey;
+        &:hover{
+          color: darken(lightgrey,50%);
+        }
+      }
+
+      &:last-child{
+        padding-right: 1rem;
+      }
+
+      &:first-child{
+        padding-left: 1rem;
+      }
+
+    }  
+
+  }
+
+  .navbar__buttons{
+  margin-left: auto;
+  margin-right: 0.8rem;
+    .navbar__button{
+      display: inline-block;
+      border-style: none;
+      text-decoration: none;
+      border-radius: 30rem;
+    }
+
+    .navbar__button--login{
+      //specific
+      background-color: #f0ecfd;
+      color: $cor_primaria;
+      font-weight: 300;
+      padding: 0.5rem 1.9rem;
+      margin-right: 24px;
+      font-size: 0.9rem;
+
+      &:hover{
+        background-color: darken(#f0ecfd,5%);
+      }
+
+    }
+
+    .navbar__button--call{
+      //specific
+      background-color: $cor_primaria;
+      color:$whites;
+      font-weight: 600;
+      padding: 0.9rem 2.6rem;
+
+      &:hover{
+        background-color: lighten($cor_primaria,5%);
+      }
+
+    }
+
+  }
+  
+}
