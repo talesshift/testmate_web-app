@@ -5,7 +5,7 @@ for vite docs go-to: https://vitejs.dev/guide/
 -------------------------------------------------
 to run the project...
 
-   >> npm install
-   >> npm run dev
+$> npm install
+$> npm run dev
  
 -------------------------------------------------
