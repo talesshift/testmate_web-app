@@ -20,11 +20,12 @@ $logo_offset:4px;
     padding: 0;
     height: $menuheight;
     margin-left: 0.8rem;
-
+    margin-top: -0.33rem;
     img{
       object-fit: cover;  
       height: calc($menuheight - $logo_offset);
       margin-top: calc($logo_offset/2);
+
     }
 
   } 
@@ -38,7 +39,7 @@ $logo_offset:4px;
 
     .navbar__page{
       display: inline-block;
-      a{
+      .navbar__link{
         text-transform: capitalize;
         font-weight:300;
         color:$lightgrey;
@@ -57,11 +58,27 @@ $logo_offset:4px;
 
     }  
 
+    .navbar__hidden{
+      background-color: rgb(255, 255, 255);
+      border: 1px solid lightgray;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      margin-left: -0.5rem;
+      display: flex;
+      justify-content: flex-start;
+      flex-flow: column;
+      position: absolute;
+      svg{
+          
+      }
+    }
+
   }
 
   .navbar__buttons{
   margin-left: auto;
   margin-right: 0.8rem;
+  
     .navbar__button{
       display: inline-block;
       border-style: none;
