@@ -39,13 +39,17 @@ $logo_offset:4px;
 
     .navbar__page{
       display: inline-block;
+      padding: 0 0.5rem 1rem 0.5rem;
+      margin-top: 1rem;
+
       .navbar__link{
         text-transform: capitalize;
         font-weight:300;
         color:$lightgrey;
         &:hover{
-          color: darken(lightgrey,50%);
+          color: darken($lightgrey,25%);
         }
+
       }
 
       &:last-child{
@@ -58,18 +62,53 @@ $logo_offset:4px;
 
     }  
 
+    
+
+  
+  @keyframes showoff {
+    0%   {color: rgba(255, 255, 255, 0);margin-top: -0.5rem;border: 0px solid rgba(255, 255, 255, 0);background-color: rgba(255, 255, 255, 0);}
+    70%  {color: darken($lightgrey,25%);margin-top: 1.25rem;border: 1px solid lightgray;background-color: rgb(255, 255, 255);}
+    100% {color:$lightgrey;margin-top: 0.5rem;border: 1px solid lightgray;background-color: rgb(255, 255, 255);}
+  }
+  @keyframes showoffSVG--bg {
+    0%   {fill:rgba(255, 255, 255, 0)}
+    70%  {fill:rgb(255, 255, 255);}
+    100% {fill:rgb(255, 255, 255);}
+  }
+  @keyframes showoffSVG--bd {
+    0%   {fill:rgba(196, 196, 196,0)}
+    70%  {fill:rgb(196, 196, 196);}
+    100% {fill:rgb(196, 196, 196);}
+  }
+    $ShowOff-duration: 0.3s;
+    $ShowOff-timing: ease;
+
     .navbar__hidden{
-      background-color: rgb(255, 255, 255);
+      background-color: $whites;
       border: 1px solid lightgray;
       border-radius: 0.5rem;
-      padding: 0.5rem;
+      padding: 0.5rem 2em 0.5rem 0.5rem;
       margin-left: -0.5rem;
       display: flex;
       justify-content: flex-start;
       flex-flow: column;
       position: absolute;
-      svg{
-          
+      margin-top: 0.5rem;
+      animation-name: showoff;
+      animation-duration: $ShowOff-duration;
+      animation-timing-function: $ShowOff-timing;
+
+      .navbar__hiddenSVG--background{
+        fill: $whites;
+        animation-name: showoffSVG--bg;
+        animation-duration: $ShowOff-duration;
+        animation-timing-function: $ShowOff-timing;
+      }
+      .navbar__hiddenSVG--border{
+        fill:rgb(196, 196, 196);
+        animation-name: showoffSVG--bd;
+        animation-duration: $ShowOff-duration;
+        animation-timing-function: $ShowOff-timing;
       }
     }
 

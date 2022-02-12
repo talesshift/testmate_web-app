@@ -6,11 +6,20 @@
     padding:0;
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+body{
+  background-image:  url("../images/PrintFinal.png");
+  background-color: rgb(255, 255, 255);
+  a{
+     text-decoration: none;
   }
-  body{
-    //background-image:  url("../images/printFinal.png");
-    background-color: rgb(255, 255, 255);
-    a{
-      text-decoration: none;
-    }
-  }
+}
+.flexAll{
+  display: flex;
+  justify-content: center;
+}

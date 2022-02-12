@@ -25,18 +25,25 @@ const Header: FunctionComponent<TesteProps> = ({logo}) => {
                         <img src={logo} />
                     </a>
                 </div>
-                    <div className='navbar__pages'>
-                    
-                    <Navitem text="platform" href="#"></Navitem>
-                    <Navitem text="services" href="www.google.com">
+                <div className='navbar__pages'>
+                    <Navitem text="platform" link="#"></Navitem>
+                    <Navitem text="services" link="www.google.com">
                         <a className="navbar__link navbar__link-hidden" href="#">pages</a>
                         <a className="navbar__link navbar__link-hidden" href="#">go in here</a>
                         <a className="navbar__link navbar__link-hidden" href="#">thanks</a>
                     </Navitem>
-                    <div className='navbar__page'><a className="navbar__link" href="#">roles</a></div>
-                    <div className='navbar__page'><a className="navbar__link" href="#">resources</a></div>
-                    <div className='navbar__page'><a className="navbar__link" href="#">contact</a></div>
-                    <div className='navbar__page'><a className="navbar__link" href="#">abou us</a></div>
+                    <Navitem text="roles" link="www.google.com">
+                        <a className="navbar__link navbar__link-hidden" href="#">pages</a>
+                        <a className="navbar__link navbar__link-hidden" href="#">go in here</a>
+                        <a className="navbar__link navbar__link-hidden" href="#">thanks</a>
+                    </Navitem>
+                    <Navitem text="resources" link="www.google.com">
+                        <a className="navbar__link navbar__link-hidden" href="#">pages</a>
+                        <a className="navbar__link navbar__link-hidden" href="#">go in here</a>
+                        <a className="navbar__link navbar__link-hidden" href="#">thanks</a>
+                    </Navitem>
+                    <Navitem text="contact" link="#"></Navitem>
+                    <Navitem text="abou us" link="#"></Navitem>
                 </div>
                 <div className='navbar__buttons'>
                     <button className='navbar__button navbar__button--login' >Login</button>
@@ -50,7 +57,7 @@ const Header: FunctionComponent<TesteProps> = ({logo}) => {
 
 
 
-const Navitem: FunctionComponent<{ text: string, href:string }> = ({children,text}) => {
+const Navitem: FunctionComponent<{ text: string, link:string }> = ({children,text,link}) => {
 
     const [disp, setDisp] = useState({display: 'none'});
     const [focus, setFocus] = useState({});
@@ -70,7 +77,7 @@ const Navitem: FunctionComponent<{ text: string, href:string }> = ({children,tex
                 }
             }}
         >
-            <a className="navbar__link" style={focus} href="#">{text}</a>
+            <a className="navbar__link" style={focus} href={link}>{text}</a>
             <div className='navbar__hidden' style={disp}>
                 <SvgComponent></SvgComponent>
                 {children}
@@ -97,15 +104,17 @@ const SvgComponent = (props:any) => {
   >
     <path
       d="M7 0 0 7h14L7 0Z"
-      style={{
+      className="navbar__hiddenSVG--background"
+/*       style={{
         fill: "#fff",
-      }}
+      }} */
     />
     <path
       d="M7 1.41 12.59 7H14L7 0 0 7h1.41L7 1.41Z"
-      style={{
+      className="navbar__hiddenSVG--border"
+/*       style={{
         fill: "rgb(196, 196, 196)",
-      }}
+      }} */
     />
   </svg>)
 }
