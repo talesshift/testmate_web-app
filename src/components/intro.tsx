@@ -4,7 +4,7 @@ type TesteProps = {
     image: string,
 }
 
-const Block1: FunctionComponent<TesteProps> = ({image}) => {
+const Intro: FunctionComponent<TesteProps> = ({image}) => {
     return(
         <div className='Block1_container'>
             <div className="block1_text">
@@ -23,4 +23,4 @@ const Block1: FunctionComponent<TesteProps> = ({image}) => {
     )
 }
 
-export default Block1
+export default Intro
