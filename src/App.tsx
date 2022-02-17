@@ -15,6 +15,9 @@ function App() {
       <Header logo={logo}/>
       <div className='flexAll'> 
         <Block1 image={good_company}/>
+        <Block1 image={good_company}/>
+        <Block1 image={good_company}/>
+        <Block1 image={good_company}/>
       </div>
     </div>
   )
