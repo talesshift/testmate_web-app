@@ -33,6 +33,8 @@ function App() {
         <Trust companys={companys} />
         <Intro image={good_company}/>
         <Intro image={good_company}/>
+        <Trust companys={companys} />
+        <Trust companys={companys} />
         <Intro image={good_company}/>
       </div>
     </div>

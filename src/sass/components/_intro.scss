@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
-    margin-top: 9.5rem;
+    margin-top: 11.5rem;
     margin-left: auto;
     margin-right: auto;
     /* height:1200px; */
@@ -12,7 +12,7 @@
     .block1_text{
         padding-left: 0.8rem;
         display:flex;
-        justify-content: center;
+        justify-content: space-around;
         flex-direction: column;
 
         h1{
@@ -35,10 +35,10 @@
             font-weight: 300;
             line-height: 1.6;
             max-width: 32rem;
-            margin-top: 1.6rem;
+            /* margin-top: 1.6rem; */
         }
         .block1__buttons{
-            margin-top: 2.6rem;
+            /* margin-top: 2.6rem; */
             .block1__button{
                 display: inline-block;
                 border-style: none;
@@ -66,6 +66,7 @@
     .block1_images{
         .block1_image{
             margin-right: -1rem;
+            margin-top: -3rem;
         }
     }
 

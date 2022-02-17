@@ -14,8 +14,7 @@ const Trust: FunctionComponent<TrustProps> = ({companys}) => {
                     <div className="trust_buttons">
                         <button className="trust_button">Brands that trust us</button>
                     </div>
-                    <p className="trust_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p className="trust_paragraph">For 6 years, we've been helping incredible brands improve their website's user experience. </p>
                 </div>
                 <div className="trust_images">
                     {companys.map(company => (
