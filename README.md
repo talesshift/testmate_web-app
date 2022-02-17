@@ -1,16 +1,13 @@
-# testmate_git
+# testmate web-app
 
-testmate web-app
-
-project made with vite: react-typescript-sass
-
-'for vite docs go-to: https://vitejs.dev/guide/'
--------------------------------------------------
+project made with vite (react-typescript-sass)
+checkout [vite docs](https://vitejs.dev/guide/)
+***
+to run the web-service:
 ```
-$> npm install
-$> npm run dev
+npm install
+npm run dev
 ```
 
--------------------------------------------------
 
-'tip: to remove the wireframe in the background [inspect element > body > (remove)background-image]'
+**TIP:** to remove the wireframe in the background `inspect element > body > (remove)background-image`
