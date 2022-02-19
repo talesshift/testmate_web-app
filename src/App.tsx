@@ -3,6 +3,7 @@ import './sass/App.scss';
 import Header from './components/header';
 import Intro from './components/intro';
 import Trust from './components/trust';
+import Process from './components/process';
 //import logo
 import logo from './images/LogoTestmate.svg';
 //import "intro" ilustration 
@@ -13,8 +14,8 @@ import westpac_logo from './images/home/layer1.png';
 import mastercard_logo from './images/home/Mastercard-logo.png';
 import woolworths_logo from './images/home/woolworths-logo.png';
 import australianGov_logo from './images/home/Group 4110.png';
-
-
+//import "porcess" illustration
+import our_process from './images/home/Group 3910.png';
 
 function App() {
   const companys = [
@@ -30,7 +31,8 @@ function App() {
       <Header logo={logo}/>
       <div className='flexAll'> 
         <Intro image={good_company}/>
-        <Trust companys={companys} />
+        <Trust companys={companys}/>
+        <Process image={our_process}/>
         <Intro image={good_company}/>
         <Intro image={good_company}/>
         <Trust companys={companys} />

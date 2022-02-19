@@ -1,4 +1,4 @@
-.Block1_container{
+.Intro_container{
     width: $max-width;
     display: flex;
     justify-content: space-between;
@@ -9,7 +9,7 @@
     /* height:1200px; */
     //background-color: rgba(255, 206, 73, 0.219);
 
-    .block1_text{
+    .Intro_text{
         padding-left: 0.8rem;
         display:flex;
         justify-content: space-around;
@@ -21,15 +21,15 @@
             font-size: 3.3rem;
         }
 
-        .block1_Title--orange{
+        .Intro_Title--orange{
             color:$oranges;
         }
         
-        .block1_Title{
+        .Intro_Title{
             color: $cor_primaria;
         }
 
-        .block1_paragraph{
+        .Intro_paragraph{
             color: $lightgrey;
             font-size: 1.2rem;
             font-weight: 300;
@@ -37,9 +37,9 @@
             max-width: 32rem;
             /* margin-top: 1.6rem; */
         }
-        .block1__buttons{
+        .Intro__buttons{
             /* margin-top: 2.6rem; */
-            .block1__button{
+            .Intro__button{
                 display: inline-block;
                 border-style: none;
                 text-decoration: none;
@@ -63,8 +63,8 @@
         
     }
 
-    .block1_images{
-        .block1_image{
+    .Intro_images{
+        .Intro_image{
             margin-right: -1rem;
             margin-top: -3rem;
         }
