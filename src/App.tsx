@@ -3,7 +3,7 @@ import './sass/App.scss';
 import Header from './components/header';
 import Intro from './components/intro';
 import Trust from './components/trust';
-import Process from './components/process';
+import Carousel from './components/carousel';
 //import logo
 import logo from './images/LogoTestmate.svg';
 //import "intro" ilustration 
@@ -16,6 +16,11 @@ import woolworths_logo from './images/home/woolworths-logo.png';
 import australianGov_logo from './images/home/Group 4110.png';
 //import "porcess" illustration
 import our_process from './images/home/Group 3910.png';
+import our_process_a from './images/home/Group 3910a.png';
+import our_process_b from './images/home/Group 3910d.png';
+import our_process_c from './images/home/Group 3910b.png';
+import our_process_d from './images/home/Group 3910c.png';
+
 
 function App() {
   const companys = [
@@ -25,6 +30,13 @@ function App() {
     westpac_logo,
     mastercard_logo
   ]
+  const process_slides = [
+    {image:our_process, title:"Call our experts for free", text:"Our team in trained to understand your needs and help improve your website's UX"},
+    {image:our_process_a, title:"Call our friends for free", text:"you guys like to understand your needs and help improve your website's UX"},
+    {image:our_process_b, title:"Call our helpers for free", text:"Help me understand your needs and improve"},
+    {image:our_process_c, title:"Call ourselves for free", text:" help improve your website's UX"},
+    {image:our_process_d, title:"Call me back for free", text:" trained to understand your needs "}
+  ]
 
   return (
     <div>
@@ -32,7 +44,7 @@ function App() {
       <div className='flexAll'> 
         <Intro image={good_company}/>
         <Trust companys={companys}/>
-        <Process image={our_process}/>
+        <Carousel slides={process_slides}/>
         <Intro image={good_company}/>
         <Intro image={good_company}/>
         <Trust companys={companys} />

@@ -1,0 +1,149 @@
+@keyframes showoff {
+
+}
+
+.process_container{
+    width: $max-width;
+    display: flex;
+    justify-content:space-between;
+    align-content: center;
+    margin-top: 14.4rem;
+    margin-left: auto;
+    margin-right: auto;
+    /* height:1200px; */
+    //background-color: rgba(255, 206, 73, 0.219);
+    .carousel_images{
+        height: 464px;
+        width:541px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        .carousel_image{
+            align-self: center;
+        }
+    }
+
+
+        
+        .carousel_container{
+            width: 39.5rem;
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            height: 100%;
+            position: relative;
+
+            .carousel_goBtn{
+                position: absolute;
+                top: 44.2%;
+                left: 90%;
+                background-color: $oranges;
+                border-radius: 3rem;
+                width: 3.2rem;
+                height: 3.2rem;
+                border-style: none;
+                &:hover{
+                    background-color: lighten($oranges,5%);
+                }
+
+                .go{
+                    color:$whites;
+                    font-size: 4.5rem;
+                    font-family: visby-round;
+                    position: relative;
+                    left: 0.2rem;
+                    top: -1.55rem;
+                    font-weight: 100;
+
+                }
+
+                .back{
+                    color:$whites;
+                    font-size: 4.5rem;
+                    font-family: visby-round;
+                    position: relative;
+                    top: -1.55rem;
+                    font-weight: 100;
+
+                }
+                
+            }
+
+            .carousel_lines{
+                display:flex;
+                padding-right:1.3rem;
+                padding-left: 0.25rem;
+                margin-bottom: 4.4rem;
+                .carousel_lineClick{
+                    width:15rem;
+                    .carousel_line{
+                        border-style: none;
+                        background-color: #e1d9fa;
+                        border-radius: 1rem;
+                        width: 90%;
+                        height:0.27rem;
+                        margin-left: 0.9rem;
+                        
+                    }
+                }
+                
+            }
+
+            .carousel_content{
+                height: 100%;
+                    .process_carouselText{
+                        padding-left: 1.3rem;
+                        .process_carouselLabels{
+                            width: 100%;
+                            margin-top: 2rem;
+                            .process_carouselLabel{
+                                color: $lightgrey;
+                                background-color: #ffffcc;
+                                display: inline-block;
+                                font-size: 1.2rem;
+                                font-family: nunito;
+                                font-weight: 400;
+                                padding: 1.2rem 2.9rem;
+                                border-radius: 3rem;
+                                margin-left: -2rem;
+                            }
+                        }
+                        h1{
+                            font-family: visby-round,Nunito;
+                        }
+                        .process_carouselBig{
+                            margin-bottom: 3rem;
+                            margin-top: 2.6rem;
+                            
+                            .process_carouselNumber{
+                                font-weight: 300;
+                                font-size: 6rem;
+                                color:$oranges;
+                                padding-right: 2.5rem;
+                                
+                                float: left;
+                            }
+                            .process_carouselTitle{
+                                font-weight: 600;
+                                font-size: 2.4rem;
+                                color: #6d42ed;
+                                max-width: 26rem;
+                                padding-top: 0.85rem;
+                            }
+                        }
+                        
+                        .process_carouselParagraph{
+                            color: $lightgrey;
+                            font-size: 1.1rem;
+                            font-weight: 400;
+                            line-height: 1.6;
+                            max-width: 26rem;
+                            padding-left: 0.2rem;
+                        }
+                    }
+            }
+        }
+    
+} 
