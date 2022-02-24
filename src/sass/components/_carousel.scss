@@ -1,6 +1,10 @@
-@keyframes showoff {
-
+@keyframes showCarousel {
+    0% {color:none;background-color: none};
+    100% {}
 }
+
+$showCarousel-duration: 0.3s;
+$showCarousel-timing: ease;
 
 .process_container{
     width: $max-width;
@@ -44,12 +48,13 @@
                 width: 3.2rem;
                 height: 3.2rem;
                 border-style: none;
+                color:$whites;
                 &:hover{
                     background-color: lighten($oranges,5%);
                 }
 
                 .go{
-                    color:$whites;
+                    
                     font-size: 4.5rem;
                     font-family: visby-round;
                     position: relative;
@@ -60,7 +65,6 @@
                 }
 
                 .back{
-                    color:$whites;
                     font-size: 4.5rem;
                     font-family: visby-round;
                     position: relative;
@@ -108,6 +112,9 @@
                                 padding: 1.2rem 2.9rem;
                                 border-radius: 3rem;
                                 margin-left: -2rem;
+                                animation-name: showCarousel;
+                                animation-duration: $showCarousel-duration;
+                                animation-timing-function: $showCarousel-timing;
                             }
                         }
                         h1{
@@ -122,8 +129,11 @@
                                 font-size: 6rem;
                                 color:$oranges;
                                 padding-right: 2.5rem;
-                                
                                 float: left;
+                                //make transition  mixin 
+                                animation-name: showCarousel;
+                                animation-duration: $showCarousel-duration;
+                                animation-timing-function: $showCarousel-timing;
                             }
                             .process_carouselTitle{
                                 font-weight: 600;
@@ -131,6 +141,10 @@
                                 color: #6d42ed;
                                 max-width: 26rem;
                                 padding-top: 0.85rem;
+
+                                animation-name: showCarousel;
+                                animation-duration: $showCarousel-duration;
+                                animation-timing-function: $showCarousel-timing;
                             }
                         }
                         
@@ -141,6 +155,10 @@
                             line-height: 1.6;
                             max-width: 26rem;
                             padding-left: 0.2rem;
+
+                            animation-name: showCarousel;
+                            animation-duration: $showCarousel-duration;
+                            animation-timing-function: $showCarousel-timing;
                         }
                     }
             }
