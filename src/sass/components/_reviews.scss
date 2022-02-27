@@ -1,64 +1,181 @@
 .reviews_container{
 
+    width: $max-width;
+    display: flex;
+    justify-content:flex-start;
+    align-content: center;
+    margin-top: 16.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    //background-color: rgba(127, 255, 212, 0.13);
             .reviews_main{
 
                 .reviews_title{
-                    
+                    display: flex;
+                    align-content: center;
+                    justify-content:flex-start;
+                    margin-top: 1.3rem;
+                    margin-bottom: 2.55rem;
                     .reviews_titleIcon{
-
+                        height:3rem;
+                        margin-left: 2rem;
                     }
                     .reviews_titleText{
-
+                        font-weight: 600;
+                        font-size: 2.4rem;
+                        color: #6d42ed;
+                        //max-width: 26rem;
+                        font-family: visby-round,Nunito;
+                        margin-left: 2rem;
                     }
                 }
                 .reviews_images{
-
+                    margin-left: 0.8rem;
+                    margin-right: 1rem;
+                    margin-bottom: -0.5rem;
                     .reviews_image{
-
+                        
+                        width:43.2rem;
                     }
                 }
                 .reviews_score{
+                    margin-top: -2.7rem;
+                    margin-left: 2.65rem;
+                    background-color: $cor_primaria;
+                    display: inline-flex;
+                    justify-content: space-around;
+                    align-content: center;
+                    overflow: hidden;
+                    border-radius: 1.5rem;
                     .reviews_scoreNumber{
-
+                        background-color: $oranges;
+                        padding: 1.1rem 1.9rem 1.1rem 1.6rem;
                         .reviews_scoreNumberText{
-
+                            span{
+                            position: relative;
+                            top:-0.5rem;
+                            font-weight: 600;
+                            font-size: 1.5rem;
+                            margin-right: 0.8rem;
+                            }
+                            font-weight: 600;
+                            font-size: 2.8rem;
+                            color:$whites;
+                            //max-width: 26rem;
+                            font-family: visby-round,Nunito;
+                            
                         }
                     }
                     .reviews_scoreName{
-
+                        display: flex;
+                        justify-content: center;
+                        flex-flow: column;
+                        padding: 0 4rem 0 2.1rem;
                         .reviews_scoreNameLabel{
-
+                            font-weight: 300;
+                            font-size: 1.15rem;
+                            color:$whites;
+                            //max-width: 26rem;
+                            font-family: visby-round,Nunito;
+                            padding-bottom: 0.1rem;
                         }
                         .reviews_scoreNameCompany{
-
+                            font-weight: 600;
+                            font-size: 1.2rem;
+                            color:$whites;
+                            //max-width: 26rem;
+                            font-family: visby-round,Nunito;
                         }
                     }
                 }
                 .reviews_text{
-
+                    max-width: 28rem;
+                    margin-left: 7.5rem;
+                    margin-top: 4rem;
+                    margin-bottom: 0.3rem;
+                    
                     .reviews_textParagraph{
+                        color: $lightgrey;
+                        font-size: 1.15rem;
+                        font-weight: 400;
+                        line-height: 1.7;
 
+                        span{
+                            color: $lightgrey;
+                            font-size: 1.15rem;
+                            font-weight: 500;
+                            line-height: 1.7;
+
+                        }
                     }
                 }
             }
             .reviews_small{
-
+                    background-color: $cor_primaria;
+                    padding: 4.2rem 5.6rem 3.5rem 5.4rem;
+                    border-radius: 2rem;
+                    margin-left: -2.8rem;
+                    //margin-right: -3.6rem;
+                    
                     .reviews_smallReview{
-
+                        padding:3.2rem 0.3rem 2.4rem 0rem;
+                        display: flex;
+                        width: 40.3rem;
+                        justify-content: space-between;
+                        align-content: center;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.288);
+                        
+                        &:first-child{
+                            padding-top: 0.2rem;
+                        }
+                        &:last-child{
+                            padding-bottom: 0rem;
+                            border: none;
+                        }
+                        .reviews_smallReviewDQ{
+                            margin-left: 1.1rem;
+                            h1{
+                                font-family: 'Pavanam','Mulish', sans-serif;
+                                font-weight: bold;
+                                font-size: 6.3rem;
+                                color:#5ad0ff;
+                                position: relative;
+                                top:-1.6rem;
+                            }
+                        }
                         .reviews_smallReviewText{
-
+                            margin-left:1.8rem ;
+                            display:flex;
+                            justify-content: flex-end;
+                            flex-flow: column;
+                            height:9.75rem;
                             .reviews_smallReviewQuote{
-
+                                color:$whites;
+                                font-style: italic;
+                                font-size: 1.6rem;
+                                line-height: 2.1rem;
+                                max-width: 20rem;
+                                font-family: 'Crimson Pro', serif;
+                                margin-bottom: auto;
                             }
                             .reviews_smallReviewName{
-
+                                color:$whites;
+                                font-size: 1.7rem;
+                                font-family: visby-round,Nunito;
+                                margin-bottom: 0.3rem;
                             }
                             .reviews_smallReviewPosition{
-
+                                color:$whites;
+                                font-weight: 100;
+                                font-size: 1.15rem;
+                                font-family: visby-round,Nunito;
                             }
                         }
                         .reviews_smallReviewImage{
+                            margin-left: auto;
+                            .reviews_smallReviewImg{
 
+                            }
                         }
                     }
 

@@ -10,7 +10,7 @@ const Intro: FunctionComponent<IntroProps> = ({image}) => {
             <div className="Intro_text">
                 <div className="Intro_titles">
                     <h1 className="Intro_Title">Discover how to have a </h1>
-                    <h1 className="Intro_Title--orange">website Australians love</h1>
+                    <h1 className="Intro_Title--orange">website Australians will love</h1>
                 </div>
                 <p className="Intro_paragraph">Get easy-to-implement user testing reports tailored to Australians. Improve your website usability and find what you need to connect with your customers </p>
                 <div className="Intro__buttons">
