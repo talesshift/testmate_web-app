@@ -5,6 +5,8 @@ import Intro from './components/intro';
 import Trust from './components/trust';
 import Carousel from './components/carousel';
 import Reviews from './components/reviews';
+import AboutUs from './components/aboutUs';
+
 //import logo
 import logo from './images/LogoTestmate.svg';
 //import "intro" ilustration 
@@ -27,16 +29,25 @@ import main_review_img from './images/home/docusign-xo3fdXgTJP8-unsplash.png'
 import small_review_img_a from './images/home/daria-pimkina-tYaccl19A3Q-unsplash.png'
 import small_review_img_b from './images/home/linkedin-sales-solutions-pAtA-1.png'
 import small_review_img_c from './images/home/linkedin-sales-solutions-pAtA8xe iVM-unsplash.png'
+import Blank from './components/blank';
+//import "aboutUs" images
+import main_aboutUs from './images/home/Group 33.png';
+import topic_aboutUs_a from './images/home/Group 4113.png';
+import topic_aboutUs_b from './images/home/Group 4116.png';
+import topic_aboutUs_c from './images/home/Group 4114.png';
+import topic_aboutUs_d from './images/home/Group 4117.png';
+import topic_aboutUs_e from './images/home/Group 4115.png';
+import topic_aboutUs_f from './images/home/Group 4118.png';
 
-
-const companys = [
+//"brands that trust us" logos
+  const companys = [
     woolworths_logo,
     australianGov_logo,
     medibank_logo,
     westpac_logo,
     mastercard_logo
   ];
-
+//"our process" carousel slides
   const process_slides = [
     {image:our_process, title:"Call our experts for free", text:"Our team in trained to understand your needs and help improve your website's UX"},
     {image:our_process_a, title:"Call our friends for free", text:"you guys like to understand your needs and help improve your website's UX"},
@@ -44,8 +55,8 @@ const companys = [
     {image:our_process_c, title:"Call ourselves for free", text:" help improve your website's UX"},
     {image:our_process_d, title:"Call me back for free", text:" trained to understand your needs "}
   ];
-
-   const main_review = {
+//"reviews" texts and images
+  const main_review = {
     icon:octopus_icon,
     title:"Reviews & Testimonials",
     image:main_review_img,
@@ -68,6 +79,24 @@ const companys = [
       name:"Amanda Smith",
       position:"Head of Design Systems at Rockfeller Inc."}
   ];
+//"about Us" texts and images
+
+const aboutUs_main ={
+  title:"About Us",
+  text:"We are an Australian-owned company that uses real Australian testers to improve your website's usability.",
+  image:main_aboutUs,
+}
+
+const aboutUs_topics =[
+  {image:topic_aboutUs_a, text:"+6,000 user tests performed"},
+  {image:topic_aboutUs_b, text:"100% Australian Testers"},
+  {image:topic_aboutUs_c, text:"friendly customer support"},
+  {image:topic_aboutUs_d, text:"+6 years of experience"},
+  {image:topic_aboutUs_e, text:"Tailored-made tests"},
+  {image:topic_aboutUs_f, text:"+10,000 qualified testers"},
+] 
+
+
 
 function App() {
 
@@ -79,6 +108,8 @@ function App() {
         <Trust companys={companys}/>
         <Carousel slides={process_slides}/>
         <Reviews small_reviews={small_reviews} main_review={main_review}/>
+        <AboutUs aboutUs_main={aboutUs_main} aboutUs_topics={aboutUs_topics}/>
+        <Blank/>
         <Intro image={good_company}/>
         <Trust companys={companys} />
         <Trust companys={companys} />

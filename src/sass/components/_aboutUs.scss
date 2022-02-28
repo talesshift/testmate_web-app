@@ -1,0 +1,67 @@
+.aboutUs_container{
+    width: $max-width;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 23rem;
+    margin-left: auto;
+    margin-right: auto;
+    .aboutUs_main{
+        display:flex;
+        justify-content: space-between;
+        flex-direction: column;
+        $text_padding:0.8rem;
+        .aboutUs_mainTitle{
+            font-weight: 600;
+            font-size: 2.75rem;
+            color: $cor_primaria;
+            font-family: visby-round,Nunito;
+            padding-left: $text_padding;
+            margin-bottom: 1.45rem;
+        }
+        .aboutUs_mainText{
+            font-weight: 300;
+            font-size: 1.2rem;
+            color: $lightgrey;
+            font-family: visby-round,Nunito;
+            max-width: 33rem;
+            line-height: 1.9rem;
+            word-spacing:0rem;
+            letter-spacing: 0.06rem;
+            padding-left: $text_padding;
+            margin-bottom: 4.3rem;
+        }
+        .aboutUs_mainImage{
+            .aboutUs_mainImg{
+                width:33.6rem;
+            }
+        }
+    }
+    .aboutUs_topics{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: space-around;
+        align-items: flex-start;
+        margin-left: 8.8rem;
+
+        .aboutUs_topic{
+            display: flex;
+            width: 21.4rem;
+            justify-content: space-between;
+            .aboutUs_topicImage{
+                width:8rem;
+            }
+            .aboutUs_topicText{
+                width: 12rem;
+                font-size: 1.2rem;
+                color: $lightgrey;
+                font-family: visby-round,Nunito;
+                letter-spacing: 0.07rem;
+                line-height: 1.8rem;
+                font-weight: 300;
+                padding-right: 1rem;
+            }
+        }
+    }
+}
