@@ -1,0 +1,128 @@
+.info_container{
+    width: $max-width;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 21.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    .info_main{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        .info_mainText{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding-left:0.8rem;
+            width:38rem;
+            margin-bottom: 3rem;
+            .info_mainTitle{ 
+                font-weight: 600;
+                font-size: 2.48rem;
+                color: $cor_primaria;
+                line-height: 3.2rem;
+                font-family: visby-round,Nunito;
+                margin-bottom: 2rem;
+            }
+            .info_mainParagraph{
+                font-weight: 300;
+                font-size: 1.05rem;
+                color: $lightgrey;
+                font-family: "Poppins", sans-serif;
+                line-height: 1.9rem;
+                word-spacing:-0.1rem;
+                letter-spacing: 0.06rem;
+                
+                
+
+            }
+        }
+        .info_mainDecoration{
+            .info_mainDecorationImg{
+                height: 9.5rem;
+                margin-top: 0.6rem;
+                margin-right: 3.1rem;
+            }
+        }
+    }
+    .info_topics{
+        .info_topic{
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 16.3rem;
+            &:first-child{
+                margin-top: 6.8rem; 
+            }
+                       
+            .info_topicDecoration--left{
+                margin-left: -2.1rem;
+                margin-top: 1.4rem;
+                margin-right: -15.25rem;
+
+                .info_topicDec{
+                    height:14rem
+                }
+            }
+            .info_topicDecoration--right{
+                margin-left: -11.6rem;
+                margin-top: -1rem;
+                margin-right: -10rem;
+                .info_topicDec{
+                    height:12rem
+                }
+            }
+            .info_topicImage{
+                z-index: 10;
+                .info_topicImg{
+                    height: 24.6rem;
+                }
+            }
+            //use mixins
+            //9.25rem;
+            //margin-left: 5rem;
+            .info_topicText{
+                margin-top: 1.4rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-right: auto;
+                .info_topicTitle{
+                    font-weight: 600;
+                    font-size: 2.32rem;
+                    color: $lightgrey;
+                    font-family: visby-round,Nunito;
+                    margin-bottom: 2rem;
+                    max-width: 34rem;
+                    
+
+                }
+                .info_topicPragraph{
+                    font-weight: 300;
+                    font-size: 1.2rem;
+                    color: $lightgrey;
+                    font-family: "Poppins", sans-serif;
+                    line-height: 2.3rem;
+                    word-spacing:0rem;
+                    letter-spacing: 0rem;
+                    margin-bottom: 4.5rem;
+                    max-width: 27rem;
+                }
+                .info_topicButton{
+                    background-color: $oranges;
+                    border-style: none;
+                    padding:1.05rem 2.55rem;
+                    border-radius: 3rem;
+                    font-family: visby-round,Nunito;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    color: $whites;
+                    margin-left: -0.15rem;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}

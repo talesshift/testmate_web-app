@@ -16,7 +16,7 @@ type aboutUsProps ={
     aboutUs_main:aboutUs_main;
 }
 
-const AbouUs: FunctionComponent<aboutUsProps> = ({aboutUs_topics,aboutUs_main}) => {
+const AboutUs: FunctionComponent<aboutUsProps> = ({aboutUs_topics,aboutUs_main}) => {
 
     return(
     <div className="aboutUs_container">
@@ -44,4 +44,4 @@ const AbouUs: FunctionComponent<aboutUsProps> = ({aboutUs_topics,aboutUs_main}) 
 
 }
 
-export default AbouUs;
+export default AboutUs;

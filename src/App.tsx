@@ -6,6 +6,8 @@ import Trust from './components/trust';
 import Carousel from './components/carousel';
 import Reviews from './components/reviews';
 import AboutUs from './components/aboutUs';
+import Infos from './components/infos';
+
 
 //import logo
 import logo from './images/LogoTestmate.svg';
@@ -38,6 +40,17 @@ import topic_aboutUs_c from './images/home/Group 4114.png';
 import topic_aboutUs_d from './images/home/Group 4117.png';
 import topic_aboutUs_e from './images/home/Group 4115.png';
 import topic_aboutUs_f from './images/home/Group 4118.png';
+//import "info's" images and decorations
+import main_infosDecoration from './images/home/Group 62.png';
+import topic_infosDecoration_a from './images/home/Group 22.png';
+import topic_infosDecoration_b from './images/home/Group 34.png';
+import topic_infosImage_a from './images/home/pexels-thisisengineering-3861970@2x.png'
+import topic_infosImage_b from './images/home/pexels-michael-burrows-7148031@2x.png'
+import topic_infosImage_c from './images/home/pexels-fox-1595391@2x.png'
+import topic_infosImage_d from './images/home/ux-indonesia-8mikJ83LmSQ-unsplash@2x.png'
+
+
+
 
 //"brands that trust us" logos
   const companys = [
@@ -79,8 +92,8 @@ import topic_aboutUs_f from './images/home/Group 4118.png';
       name:"Amanda Smith",
       position:"Head of Design Systems at Rockfeller Inc."}
   ];
-//"about Us" texts and images
 
+//"about Us" texts and images
 const aboutUs_main ={
   title:"About Us",
   text:"We are an Australian-owned company that uses real Australian testers to improve your website's usability.",
@@ -96,7 +109,35 @@ const aboutUs_topics =[
   {image:topic_aboutUs_f, text:"+10,000 qualified testers"},
 ] 
 
+//"infos" texts and images
+const infos_main ={
+  title:"Get the support your team needs with our fresh insight",
+  paragraph:"Your team will get the best support from us, with a fresh insight into your website's UX to tell you if you're on the right path.",
+  decoration:main_infosDecoration,
+}
 
+const infos_topics =[
+  {image:topic_infosImage_a,
+    decoration:topic_infosDecoration_a,
+    title:"Expert UX researchers",
+    paragraph:"Get the most efficient website user testing report. Our senior experts will help you optimize your website's UX.",
+    button:"Talk to a UX Specialist",},
+  {image:topic_infosImage_b,
+    decoration:topic_infosDecoration_b,
+    title:"Friendly customer support and efficient feedback",
+    paragraph:"You will promptly get all the answers about your user testing process to help you understand your results.",
+    button:"Get the Best Support",},
+  {image:topic_infosImage_c,
+    decoration:topic_infosDecoration_a,
+    title:"Integrate with your team",
+    paragraph:"If you already have a user testing team, we can work with them to give fresh eyes to your website's UX.",
+    button:"Get a new Insight",},
+  {image:topic_infosImage_d,
+    decoration:topic_infosDecoration_b,
+    title:"Fast results",
+    paragraph:"Make more money with better UX and save time with our simplified user testing service.",
+    button:"Save Time and Money",}
+] 
 
 function App() {
 
@@ -109,6 +150,7 @@ function App() {
         <Carousel slides={process_slides}/>
         <Reviews small_reviews={small_reviews} main_review={main_review}/>
         <AboutUs aboutUs_main={aboutUs_main} aboutUs_topics={aboutUs_topics}/>
+        <Infos info_main={infos_main} info_topics={infos_topics} />
         <Blank/>
         <Intro image={good_company}/>
         <Trust companys={companys} />
