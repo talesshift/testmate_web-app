@@ -1,0 +1,67 @@
+.delivery_container{
+    width: $max-width;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    .delivery_info{
+        .delivery_header{
+            padding-left: 1rem;
+            border-bottom: 1px solid #90909075;
+            .delivery_headerTitle{
+                font-weight: 600;
+                font-size: 2.55rem;
+                color: $cor_primaria;
+                line-height: 3.2rem;
+                font-family: visby-round,Nunito;
+                margin-bottom: 0.3rem;
+            }
+            .delivery_headerParagraph{
+                font-weight: 300;
+                font-size: 1.06rem;
+                color: $lightgrey;
+                font-family: "Poppins", sans-serif;
+                line-height: 1.9rem;
+                word-spacing:-0.1rem;
+                letter-spacing: 0.06rem;
+                max-width: 44rem;
+                letter-spacing: 0.03rem;
+                margin-bottom: 1.8rem;
+            }
+        }
+        .delivery_topics{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 45.5rem;
+            padding-right: 2.45rem;
+            padding-left: 0.85rem;
+            .delivery_topic{
+                display:flex;
+                width: 19.5rem;
+                margin-top: 3rem;
+                margin-bottom: -0.5rem;
+                .delivery_topicIcon{
+                    width:1.35rem;
+                    height:1.35rem;
+                    border: 4px solid $oranges;
+                    border-radius: 10rem;
+                    margin-right: 1.2rem;
+                }
+                .delivery_topicText{
+                    font-family: visby-round,Nunito;
+                    color:$lightgrey;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    .delivery_illustration{
+        margin-right: 4.1rem;
+        margin-top: -1.9rem;
+        .delivery_img{
+            width:30.5rem;
+        }
+    }
+}

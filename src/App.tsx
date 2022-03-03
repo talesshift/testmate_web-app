@@ -7,7 +7,11 @@ import Carousel from './components/carousel';
 import Reviews from './components/reviews';
 import AboutUs from './components/aboutUs';
 import Infos from './components/infos';
-
+import How from './components/how';
+import Delivery from './components/Delivery';
+import Save from './components/Save'
+import Methods from './components/methods';
+import Footer from './components/footer';
 
 //import logo
 import logo from './images/LogoTestmate.svg';
@@ -48,8 +52,31 @@ import topic_infosImage_a from './images/home/pexels-thisisengineering-3861970@2
 import topic_infosImage_b from './images/home/pexels-michael-burrows-7148031@2x.png'
 import topic_infosImage_c from './images/home/pexels-fox-1595391@2x.png'
 import topic_infosImage_d from './images/home/ux-indonesia-8mikJ83LmSQ-unsplash@2x.png'
-
-
+//import "how" icons
+import how_topicIcon_a from './images/home/Path 5432.png';
+import how_topicIcon_b from './images/home/Group 3921.png';
+import how_topicIcon_c from './images/home/Path 5676.png';
+import how_topicIcon_d from './images/home/Group 3923.png';
+import how_topicIcon_e from './images/home/Group 3920.png';
+import how_topicIcon_f from './images/home/Group 3922.png';
+//import "delivery" illustration 
+import delivery_illustration from './images/home/Group 4119.png';
+//import "save" ilustrations and icons
+import save_illustration from './images/home/Group 4066.png';
+import save_buttonIcon from './images/home/Group 3927.png';
+import save_topicIcon_a from './images/home/Group 4120.png';
+import save_topicIcon_b from './images/home/Group 4121.png';
+import save_topicIcon_c from './images/home/video-camera.png';
+import save_topicIcon_d from './images/home/agile.png';
+import save_topicIcon_e from './images/home/Group 4124.png';
+//import "methods" icons
+import methods_icon_a from './images/home/telephone.svg';
+import methods_icon_b from './images/home/orbit.svg';
+//import "footer" icons
+import footer_topLogo from './images/home/Group 4043.png';
+import footer_topIcon_b from './images/home/Group 206.png';
+import footer_topIcon_c from './images/home/Group 207.png';
+import footer_topIcon_a from './images/home/Group 208.png';
 
 
 //"brands that trust us" logos
@@ -99,7 +126,6 @@ const aboutUs_main ={
   text:"We are an Australian-owned company that uses real Australian testers to improve your website's usability.",
   image:main_aboutUs,
 }
-
 const aboutUs_topics =[
   {image:topic_aboutUs_a, text:"+6,000 user tests performed"},
   {image:topic_aboutUs_b, text:"100% Australian Testers"},
@@ -115,7 +141,6 @@ const infos_main ={
   paragraph:"Your team will get the best support from us, with a fresh insight into your website's UX to tell you if you're on the right path.",
   decoration:main_infosDecoration,
 }
-
 const infos_topics =[
   {image:topic_infosImage_a,
     decoration:topic_infosDecoration_a,
@@ -139,6 +164,106 @@ const infos_topics =[
     button:"Save Time and Money",}
 ] 
 
+//"how" texts and images
+const how_topics = [
+  {icon:how_topicIcon_a, text:"Your data is safe with us"},
+  {icon:how_topicIcon_b, text:"Critical thinking"},
+  {icon:how_topicIcon_c, text:"Large tester database"},
+  {icon:how_topicIcon_d, text:"Australian owned and operated"},
+  {icon:how_topicIcon_e, text:"Clear outcomes"},
+  {icon:how_topicIcon_f, text:"Testers that match the profile of your website users"},
+]
+const how_header = {
+  title:"How we work",
+  paragraph:"You don't have to try to read your customer's mind anymore. We show you what your customer thinks about your website and give you the solutions."
+}
+
+//"Delivery" text and images
+const delivery_topics = [
+  {text:"List of usability problems"},
+  {text:"Net Promoter Score (NPS)"},
+  {text:"Actionable solutions"},
+  {text:"System Usability Scale (SUS)"},
+  {text:"Key findings"},
+  {text:"Video testimonials"}
+]
+const delivery_header = {
+  title:"Our delivery",
+  paragraph:"Get easy-to-read written and video reports to improve your company results"
+} 
+
+//"Save" text and images
+const save_topics = [
+  {icon:save_topicIcon_a, text:"Fast turnaround"},
+  {icon:save_topicIcon_b, text:"Guarantee 100% of your money"},
+  {icon:save_topicIcon_c, text:"Save time with video reports"},
+  {icon:save_topicIcon_d, text:"Shortened tests"},
+  {icon:save_topicIcon_e, text:"Cost-effective solution for your website"},
+]
+const save_main = {
+  title:"Save time and money",
+  paragraph:"Poor user experience can make your company lose money. We will give you a cost-effective user testing service to improve your website usability.",
+  illustration:save_illustration,
+  button:save_buttonIcon
+}
+
+//"methods" text and images
+const methods_buttons = [
+  {icon:methods_icon_a, text:"Book a free call", color:"orange"},
+  {icon:methods_icon_b, text:"Check our Services",color:"purple"},
+]
+const methods_main = {
+  title:"Have a squiz at our methods",
+  subtitle:"See how fast you can receive results.",
+}
+
+//"footer" text,structure,links and images
+const footer_top = {
+  logo:footer_topLogo,
+  text:"© 2022 Testmate. All Rights Reserved.",
+  socials:[
+    {icon:footer_topIcon_a, link:"#"},
+    {icon:footer_topIcon_b, link:"#"},
+    {icon:footer_topIcon_c, link:"#"},
+  ]
+}
+
+const map_pages = [
+  {title:"Services",link:"#",sub_pages:[
+    {name:"Full service user testing",link:"#"},
+    {name:"Rapid user testing",link:"#"},
+    {name:"Videos/Surveys",link:"#"},
+  ]},
+  {title:"Roles",link:"#",sub_pages:[
+    {name:"UX/UI - Design",link:"#"},
+    {name:"Researcher",link:"#"},
+    {name:"Marketing",link:"#"},
+    {name:"Executive",link:"#"},
+    {name:"Product Owner",link:"#"},
+    {name:"Ecom",link:"#"},
+  ]},
+  {title:"Platform",link:"#",sub_pages:[]},
+  {title:"Portifolio",link:"#",sub_pages:[]},
+  {title:"Resources",link:"#",sub_pages:[
+    {name:"Blog",link:"#"},
+    {name:"Double your conversations",link:"#"},
+    {name:"UX for Government Agencies",link:"#"},
+  ]},
+  {title:"Industries",link:"#",sub_pages:[
+    {name:"Agencies",link:"#"},
+    {name:"e-Commerce",link:"#"},
+    {name:"Financial Institutions",link:"#"},
+    {name:"Health Insurance",link:"#"},
+    {name:"Government Agencies",link:"#"},
+    {name:"SaaS",link:"#"},
+    {name:"Startups",link:"#"},
+    {name:"Nonprofits (NPO)",link:"#"},
+  ]},
+  {title:"Contact",link:"#",sub_pages:[]},
+  {title:"About Us",link:"#",sub_pages:[]},
+  {title:"Login",link:"#",sub_pages:[]},
+]
+
 function App() {
 
   return (
@@ -151,11 +276,11 @@ function App() {
         <Reviews small_reviews={small_reviews} main_review={main_review}/>
         <AboutUs aboutUs_main={aboutUs_main} aboutUs_topics={aboutUs_topics}/>
         <Infos info_main={infos_main} info_topics={infos_topics} />
-        <Blank/>
-        <Intro image={good_company}/>
-        <Trust companys={companys} />
-        <Trust companys={companys} />
-        <Intro image={good_company}/>
+        <How how_header={how_header} how_topics={how_topics}/>
+        <Delivery delivery_topics={delivery_topics} delivery_header={delivery_header} delivery_illustration={delivery_illustration}/>
+        <Save save_topics={save_topics} save_main={save_main}/>
+        <Methods methods_main={methods_main} methods_buttons={methods_buttons}/>
+        <Footer footer_top={footer_top} map_pages={map_pages}/>
       </div>
     </div>
   )

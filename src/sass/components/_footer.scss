@@ -1,0 +1,84 @@
+.footer_outerContainer{
+    width: 100%;
+    background-color: rgba(0, 0, 0);
+    margin-top: 21.3rem;
+    .footer_innerContainer{
+        width: $max-width;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        .footer_top{
+            display:flex;
+            align-items: center;
+            width:100%;
+            padding: 3.4rem 1rem 2.8rem 1rem;
+            border-bottom: 1px solid $whites;
+                .footer_topLogo{
+
+                }
+                .footer_topText{
+                    margin-left: 3rem;
+                    font-weight: 300;
+                    font-size: 1.06rem;
+                    color: $whites;
+                    font-family: "Poppins", sans-serif;
+                    margin-right: auto;
+                }
+                .footer_topSocials{
+                    display:flex;
+                    .footer_topSocial{
+                        margin-left: 1rem;
+                        .footer_topSocialImg{
+
+                        }
+                    }
+                }
+        }
+        .footer_map{
+            width:100%;
+            padding: 3.8rem 1rem 3.5rem 1rem;
+            .footer_mapPages{
+                width:100%;
+                display:flex;
+                justify-content: space-between;
+                
+                .footer_mapPage{
+                    width:12rem;
+                    &:last-child {
+                        width:fit-content;
+                        max-width: 12rem;
+                    }
+                    .footer_mapPageBtn{
+                        text-align: left;
+                        display:block;
+                        background-color: transparent;
+                        border-style: none;
+                        font-family: visby-round,Nunito;
+                        color:white;
+                        font-weight: 900;
+                        font-size: 1.15rem;
+                        margin-bottom: 4rem;
+                    }
+                }   
+                
+                .footer_mapSubPages{
+                    display:flex;
+                    flex-direction: column;
+                    .footer_mapSubPageBtn{
+                        text-align: left;
+                        display:block;
+                        background-color: transparent;
+                        border-style: none;
+                        width: 12rem;
+                        font-family: visby-round,Nunito;
+                        color:white;
+                        font-weight: 400;
+                        font-size: 1.15rem;
+                        margin-bottom: 1.7rem;
+                    }
+                }
+            }
+        }
+    }
+}

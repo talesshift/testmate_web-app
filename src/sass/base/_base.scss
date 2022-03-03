@@ -85,9 +85,9 @@ html {
 }
 
 body{
-  background-image:  linear-gradient(rgba(255, 255, 255, 0.599), rgba(255, 255, 255, 0.599)), url("../images/Home.png");
-  background-blend-mode: color-dodge;
-  //background-color: rgb(255, 255, 255);
+  /* background-image:  linear-gradient(rgba(255, 255, 255, 0.599), rgba(255, 255, 255, 0.599)), url("../images/Home.png");
+  background-blend-mode: color-dodge; */
+  background-color: rgb(255, 255, 255);
   background-position: top;
   background-size: 1870px;
   a{

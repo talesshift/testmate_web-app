@@ -1,0 +1,65 @@
+.methods_container{
+    width: 1366px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    .methods_title{
+        font-weight: 600;
+        font-size: 2.85rem;
+        color: $cor_primaria;
+        line-height: 3.2rem;
+        font-family: visby-round,Nunito;
+        margin-bottom: 1.8rem;    
+    }
+    .methods_subtitle{
+        font-weight: 300;
+        font-size: 1.35rem;
+        color: $lightgrey;
+        font-family: "Poppins", sans-serif;
+        line-height: 1.8rem;
+        word-spacing:-0.1rem;
+        letter-spacing: 0.03rem;  
+        max-width: 29rem;  
+        margin-bottom: 2rem;
+    }
+    .methods_buttons{
+        display:flex;
+        .methods_button{
+            display:flex;
+            align-items:center;
+            padding: 0.6rem 3rem;
+            border-radius: 3rem;
+            margin:0.6rem;
+            .methods_buttonIcon{
+                height: 2rem; 
+                margin-right:2rem;
+                .methods_buttonImg{
+                    height:2rem;
+                }
+            }
+            .methods_buttonText{
+                font-weight: 600;
+                font-size: 1.3rem;
+                color: $whites;
+                line-height: 3.2rem;
+                font-family: visby-round,Nunito;
+            }
+        }
+        .methods_button--orange{
+            background-color: $oranges;
+            &:hover{
+                background-color: lighten($oranges,5%);
+            }
+        }
+        .methods_button--purple{
+            background-color: $cor_primaria;
+            &:hover{
+                background-color: lighten($cor_primaria,5%);
+            }
+        }
+    }
+}
