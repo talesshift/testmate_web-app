@@ -12,6 +12,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from "./App";
 import Home from "./pages/home";
+import Services from "./pages/services";
+import Platform from "./pages/platform";
+import Resources from "./pages/resources";
+import About from "./pages/about";
+import Contact from "./pages/contact";
+import Roles from "./pages/roles";
+
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const rootElement = document.getElementById("root");
@@ -21,6 +29,12 @@ render(
     <Route path="/" element={<App />}>
       <Route path="/" element={<Home />}/>
       <Route path="home" element={<Home />}/>
+      <Route path="services" element={<Services />}/>
+      <Route path="platform" element={<Platform />}/>
+      <Route path="aboutus" element={<About />}/>
+      <Route path="contact" element={<Contact />}/>
+      <Route path="roles" element={<Roles />}/>
+      <Route path="resources" element={<Resources />}/>
     </Route>
   </Routes>
 </BrowserRouter>, 

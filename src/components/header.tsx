@@ -26,12 +26,13 @@ const Header: FunctionComponent<TesteProps> = ({logo}) => {
                     </a>
                 </div>
                 <div className='navbar__pages'>
-                    <Navitem text="platform" link="#"></Navitem>
                     <Navitem text="services" link="www.google.com">
                         <a className="navbar__link navbar__link-hidden" href="#">pages</a>
                         <a className="navbar__link navbar__link-hidden" href="#">go in here</a>
                         <a className="navbar__link navbar__link-hidden" href="#">thanks</a>
                     </Navitem>
+                    <Navitem text="platform" link="#"></Navitem>
+                    
                     <Navitem text="roles" link="www.google.com">
                         <a className="navbar__link navbar__link-hidden" href="#">pages</a>
                         <a className="navbar__link navbar__link-hidden" href="#">go in here</a>
@@ -43,7 +44,7 @@ const Header: FunctionComponent<TesteProps> = ({logo}) => {
                         <a className="navbar__link navbar__link-hidden" href="#">thanks</a>
                     </Navitem>
                     <Navitem text="contact" link="#"></Navitem>
-                    <Navitem text="abou us" link="#"></Navitem>
+                    <Navitem text="about us" link="#"></Navitem>
                 </div>
                 <div className='navbar__buttons'>
                     <button className='navbar__button navbar__button--login' >Login</button>

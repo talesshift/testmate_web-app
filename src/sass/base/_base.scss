@@ -70,8 +70,6 @@
 
 //general
 
-
-
 *{
     box-sizing: border-box;
     margin:0;
@@ -85,8 +83,7 @@ html {
 }
 
 body{
-  /* background-image:  linear-gradient(rgba(255, 255, 255, 0.599), rgba(255, 255, 255, 0.599)), url("../images/Home.png");
-  background-blend-mode: color-dodge; */
+  background-image:  linear-gradient(rgba(255, 255, 255, 0.599), rgba(255, 255, 255, 0.599)), url("../images/services/services.png");
   background-color: rgb(255, 255, 255);
   background-position: top;
   background-size: 1870px;

@@ -2,10 +2,13 @@
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
-
+//base
 @import "base/base";
-
+//ubiquous components
 @import "components/header";
+@import "components/footer";
+@import "components/blank";
+//components
 @import "components/intro";
 @import "components/trust";
 @import "components/carousel";
@@ -16,7 +19,8 @@
 @import "components/delivery";
 @import "components/save";
 @import "components/methods";
-@import "components/footer";
 
-@import "components/blank";
+@import "components/title";
+
+
 
