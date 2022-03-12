@@ -7,15 +7,25 @@
 //    >> npm run dev
 //-------------------------------------------------
 
+import { render } from "react-dom";
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+import App from "./App";
+import Home from "./pages/home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-)
+const rootElement = document.getElementById("root");
+render(
+<BrowserRouter>
+  <Routes>
+    <Route path="/" element={<App />}>
+      <Route path="/" element={<Home />}/>
+      <Route path="home" element={<Home />}/>
+    </Route>
+  </Routes>
+</BrowserRouter>, 
+rootElement
+);
+
 
 //obs:>> npm install sass --save-dev
