@@ -2,7 +2,7 @@
     width: 100%;
     .title__outerContainer{
         width: 100%;
-        background-color: $cor_primaria;
+        background-color: $purple;
         margin-top: 6.4rem;
         padding: 5rem 0rem 8.5rem 0rem;
         .title_innerContainer{
@@ -20,11 +20,7 @@
                     text-decoration: none;
                 }
                 .title_mainTitle{
-                    font-weight: 600;
-                    font-size: 3.4rem;
-                    color: $whites;
-                    //max-width: 26rem;
-                    font-family: visby-round,Nunito;
+                    @include BigText($color:$whites);
                     margin-left: 1rem;
                 }
             }
@@ -33,13 +29,7 @@
                 padding-left: 6.5rem;
                 padding-top: 0.5rem;
                 .title_text{
-                    font-weight: 300;
-                    font-size: 1.02rem;
-                    color: $whites;
-                    font-family: "Poppins", sans-serif;
-                    line-height: 1.9rem;
-                    word-spacing:-0.1rem;
-                    letter-spacing: 0.06rem;
+                    @include SmallText($color:$whites);
                 }
             }
         }

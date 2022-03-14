@@ -1,4 +1,5 @@
 import React, { FunctionComponent, useState } from "react";
+import go_icon from "../images/services/Group 4774.svg"
 
 interface subPage{
     illustration:string;
@@ -22,7 +23,7 @@ const SubPages: FunctionComponent<subPagesProps> = ({subPages}) => {
                             <div className="subPage_buttons">
                                 <button className="subPages_buttonMain">{subPage.text}</button>
                                 <div className="subPages_buttonIcon">
-                                    <img className="subPages_buttonImg"/>
+                                    <img className="subPages_buttonImg" src={go_icon}/>
                                 </div>
                             </div>
                         </div>

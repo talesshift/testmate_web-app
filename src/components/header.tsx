@@ -1,32 +1,36 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useState, useCallback } from "react";
+import {useNavigate} from 'react-router-dom';
 
 type TesteProps = {
     logo: string,
 }
 
+
+
 const Header: FunctionComponent<TesteProps> = ({logo}) => {
 
- /*    const [style, setStyle] = useState({display: 'none'});
-                    <div className='navbar__page' onMouseEnter={e => {setStyle({display: 'flex'});}} onMouseLeave={e => {setStyle({display: 'none'})}}>
-                        <a className="navbar__link" href="#">platform</a>
-                        <div className='navbar__hidden' style={style}>
-                            <a className="navbar__link-hidden" href="#">pages</a>
-                            <a className="navbar__link-hidden" href="#">go in here</a>
-                            <a className="navbar__link-hidden" href="#">thanks</a>
+    /*    const [style, setStyle] = useState({display: 'none'});
+                        <div className='navbar__page' onMouseEnter={e => {setStyle({display: 'flex'});}} onMouseLeave={e => {setStyle({display: 'none'})}}>
+                            <a className="navbar__link" href="#">platform</a>
+                            <div className='navbar__hidden' style={style}>
+                                <a className="navbar__link-hidden" href="#">pages</a>
+                                <a className="navbar__link-hidden" href="#">go in here</a>
+                                <a className="navbar__link-hidden" href="#">thanks</a>
+                            </div>
                         </div>
-                    </div>
- */
-
+    */
+    const navigate = useNavigate();
+    const handleOnClick = useCallback((linke:string) => navigate(linke, {replace: true}), [navigate]);
     return(
         <nav className='navbar'>
             <div className='navbar__container'>
-                <div className='navbar__logo'>
+                <div className='navbar__logo' onClick={() => handleOnClick("/")}>
                     <a>
                         <img src={logo} />
                     </a>
                 </div>
                 <div className='navbar__pages'>
-                    <Navitem text="services" link="www.google.com">
+                    <Navitem text="services" link={"/services"}>
                         <a className="navbar__link navbar__link-hidden" href="#">pages</a>
                         <a className="navbar__link navbar__link-hidden" href="#">go in here</a>
                         <a className="navbar__link navbar__link-hidden" href="#">thanks</a>
@@ -63,8 +67,12 @@ const Navitem: FunctionComponent<{ text: string, link:string }> = ({children,tex
     const [disp, setDisp] = useState({display: 'none'});
     const [focus, setFocus] = useState({});
     console.log(children);
+    const navigate = useNavigate();
+    const handleOnClick = useCallback((linke:string) => navigate(linke, {replace: true}), [navigate]);
+    
     return(
         <div className='navbar__page' 
+            onClick={() => handleOnClick(link)}
             onMouseEnter={e => {
                 if(children!==undefined){
                     setDisp({display: 'flex'});

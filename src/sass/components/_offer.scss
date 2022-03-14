@@ -1,0 +1,55 @@
+.offer_outerContainer{
+    width: 100%;
+    background-color: $purple;
+    margin-top: 25.3rem;
+    padding:8.8rem 0;
+    .offer_innerContainer{
+        width: $max-width;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .offer_titles{
+            display:flex;
+            flex-direction: column;
+            align-items: baseline;
+            max-width: 29rem;
+            margin-right: 14.5rem;
+            .offer_title{
+                .offer_title--bold{
+                    @include BigText($color:$whites,$size:2.3rem);
+                }
+                .offer_title--thin{
+                    @include BigText($color:$whites,$size:2.3rem);
+                    font-weight: 100;
+                }
+            }
+            .offer_subtitle{
+
+            }
+        }
+        .offer_buttons{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            .offer_button{
+                background-color: $oranges;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding:1.3rem;
+                border-radius: 6rem;
+                width:21rem;
+                .offer_buttonIcon{
+                    height:2rem;
+                    padding-right: 1.5rem;
+                }
+                .offer_buttonText{
+                    @include BigText($color:$whites,$size:1.2rem);
+                }
+            }
+        }
+    }
+}

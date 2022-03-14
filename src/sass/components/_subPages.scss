@@ -1,18 +1,44 @@
 .subPages__container{
+    width: $max-width;
+    margin-top: 6.5rem;
+    margin-left: auto;
+    margin-right: auto;
     .subPages_subPages{
+        display: flex;
+        justify-content:space-around;
+        align-content: center;
         .subPages_subPage{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
             .subPages_ilustration{
+                width: 25rem;
+                display: flex;
+                justify-content: center;
                 .subPages_ilu{
-
+                    height: 20rem;
                 }
             }
             .subPage_buttons{
+                display: flex;
+                align-items: center;
+                margin-top: 4rem;
                 .subPages_buttonMain{
-
+                    padding:1.2rem 3rem;
+                    border:none;
+                    border-radius: 2rem;
+                    font-weight: 600;
+                    font-size: 1.45rem;
+                    color: $purple;
+                    background-color: #F0EBFD;
+                    //max-width: 26rem;
+                    font-family: visby-round,Nunito;
                 }
                 .subPages_buttonIcon{
+                    height:2.8rem;
+                    margin-left: -1rem;
                     .subPages_buttonImg{
-                        
+                        height:2.8rem;
                     }
                 }
             }

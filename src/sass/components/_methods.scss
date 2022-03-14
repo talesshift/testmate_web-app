@@ -7,10 +7,11 @@
     margin-top: 20rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 21.3rem;
     .methods_title{
         font-weight: 600;
         font-size: 2.85rem;
-        color: $cor_primaria;
+        color: $purple;
         line-height: 3.2rem;
         font-family: visby-round,Nunito;
         margin-bottom: 1.8rem;    
@@ -56,9 +57,9 @@
             }
         }
         .methods_button--purple{
-            background-color: $cor_primaria;
+            background-color: $purple;
             &:hover{
-                background-color: lighten($cor_primaria,5%);
+                background-color: lighten($purple,5%);
             }
         }
     }

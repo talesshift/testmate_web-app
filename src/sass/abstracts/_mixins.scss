@@ -1,0 +1,16 @@
+@mixin BigText($color, $size: 3.4rem) {
+    font-weight: 600;
+    font-size: $size;
+    color: $color;
+    font-family: visby-round,Nunito;
+}
+
+@mixin SmallText($color, $size: 1.02rem) {
+    font-weight: 300;
+    font-size: $size;
+    color: $color;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.9rem;
+    word-spacing:-0.1rem;
+    letter-spacing: 0.06rem;
+}

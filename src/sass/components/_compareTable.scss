@@ -1,0 +1,106 @@
+.compareTable_container{
+    width: $max-width;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 22.8rem;
+    padding:0 0.8rem;
+    .compareTable_Header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .compareTable_title{
+            @include BigText($color:$purple, $size:2.5rem);
+        }
+        .compareTable_text{
+            @include SmallText($color:$lightgrey);
+            margin-top: 2rem;
+            text-align: center;
+            max-width: 32rem;
+        }
+    }
+    .compareTable_table{
+        margin-top: 5.5rem;
+        width:100%;
+        border-spacing:0; /* Removes the cell spacing via CSS */
+        border-collapse: collapse;  /* Optional - if you don't want to have double border where cells touch */
+        background-color: $lightOrange;
+        border-radius: 2rem;
+        padding-bottom: 2.8rem;
+        $colWidth:19rem;
+        div{
+            display:flex;
+            justify-content: flex-start;
+        }
+        div div{
+            width:$colWidth;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            @include BigText($color:$purple, $size:1.2rem);
+
+        }
+
+        $pad:3.3rem;
+        div div:first-child{
+            display:flex;
+            justify-content: flex-start;
+            width:21.5rem;
+        }
+        div div:last-child{
+            $padright:4rem;
+            width:calc($colWidth + $padright);
+            padding-right: $padright;
+        }
+        .compareTable_tableRow--header{
+            background-color:$lightPurple;
+            padding: $pad;
+            border-radius: 2rem;
+            margin-bottom: 2.2rem;
+            .compareTable_tableHeader--services{
+                .compareTable_servicesButton{
+                    border: none;
+                    width: 12.3rem;
+                    color:$whites;
+                    background-color: $oranges;
+                    padding: 0.95rem;
+                    border-radius: 4rem;
+                    display: float;
+                    justify-content: center;
+                    margin: -0.8rem -0.5rem;
+                }
+            }
+            .compareTable_tableHeader--head{
+
+            }
+        }
+        .compareTable_tableRow{
+            &:last-child div{
+                border-bottom: 0px solid $lightPurple
+            }
+            div{
+                border-bottom: 1px solid $lightPurple;
+                padding:2.2rem 0;
+            }
+            .compareTable_tableItem--label{
+                margin-left: $pad;
+                color:#707070;
+                padding-left: 1.7rem;
+                padding-right: 3.3rem;
+            }
+
+            .compareTable_tableItem--icon{
+                .check{
+                    height:3rem;
+                }
+                .unCheck{
+                    height:3rem;
+                    opacity: 30%;
+                }
+                .compareTable_tableIcon{
+                    
+                }
+            }
+        }
+    }
+}
