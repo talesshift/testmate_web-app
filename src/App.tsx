@@ -15,6 +15,32 @@ import footer_topIcon_a from './images/home/Group 208.png';
 
 //-------------------------------------------------
 
+//"header" text,structure and links
+
+const header_pages = [
+  {title:"Services",link:"/services",sub_pages:[
+    {name:"Full service user testing",link:"#"},
+    {name:"Rapid user testing",link:"#"},
+    {name:"Videos/Surveys",link:"#"},
+  ]},
+  {title:"Platform",link:"#"},
+  {title:"Roles",link:"#",sub_pages:[
+    {name:"UX/UI - Design",link:"#"},
+    {name:"Researcher",link:"#"},
+    {name:"Marketing",link:"#"},
+    {name:"Executive",link:"#"},
+    {name:"Product Owner",link:"#"},
+    {name:"Ecom",link:"#"},
+  ]},
+  {title:"Resources",link:"#",sub_pages:[
+    {name:"Blog",link:"#"},
+    {name:"Double your conversations",link:"#"},
+    {name:"UX for Government Agencies",link:"#"},
+  ]},
+  {title:"Contact",link:"#"},
+  {title:"About Us",link:"#"},
+];
+
 //"footer" text,structure,links and images
 const footer_top = {
   logo:footer_topLogo,
@@ -68,7 +94,7 @@ function App() {
 
   return (
     <div>
-      <Header logo={logo}/>
+      <Header logo={logo} pages={header_pages}/>
       <Outlet/>
       <Footer footer_top={footer_top} map_pages={map_pages}/>
     </div>

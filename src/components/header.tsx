@@ -1,54 +1,53 @@
 import React, { FunctionComponent, useState, useCallback } from "react";
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, Link} from 'react-router-dom';
+
+interface subPage{
+    name:string;
+    link:string;
+}
+
+interface page{
+    title:string;
+    link:string;
+    sub_pages?:subPage[];
+}
 
 type TesteProps = {
     logo: string,
+    pages:page[];
 }
 
 
 
-const Header: FunctionComponent<TesteProps> = ({logo}) => {
+const Header: FunctionComponent<TesteProps> = ({logo,pages}) => {
 
     /*    const [style, setStyle] = useState({display: 'none'});
                         <div className='navbar__page' onMouseEnter={e => {setStyle({display: 'flex'});}} onMouseLeave={e => {setStyle({display: 'none'})}}>
-                            <a className="navbar__link" href="#">platform</a>
+                            <Link className="navbar__link" href="#">platform</Link>
                             <div className='navbar__hidden' style={style}>
-                                <a className="navbar__link-hidden" href="#">pages</a>
-                                <a className="navbar__link-hidden" href="#">go in here</a>
-                                <a className="navbar__link-hidden" href="#">thanks</a>
+                                <Link className="navbar__link-hidden" href="#">pages</Link>
+                                <Link className="navbar__link-hidden" href="#">go in here</Link>
+                                <Link className="navbar__link-hidden" href="#">thanks</Link>
                             </div>
                         </div>
     */
-    const navigate = useNavigate();
-    const handleOnClick = useCallback((linke:string) => navigate(linke, {replace: true}), [navigate]);
+/*     const navigate = useNavigate();
+    const handleOnClick = useCallback((linke:string) => navigate(linke, {replace: true}), [navigate]); */
     return(
         <nav className='navbar'>
             <div className='navbar__container'>
-                <div className='navbar__logo' onClick={() => handleOnClick("/")}>
-                    <a>
+                <div className='navbar__logo'>
+                    <Link to="/">
                         <img src={logo} />
-                    </a>
+                    </Link>
                 </div>
                 <div className='navbar__pages'>
-                    <Navitem text="services" link={"/services"}>
-                        <a className="navbar__link navbar__link-hidden" href="#">pages</a>
-                        <a className="navbar__link navbar__link-hidden" href="#">go in here</a>
-                        <a className="navbar__link navbar__link-hidden" href="#">thanks</a>
-                    </Navitem>
-                    <Navitem text="platform" link="#"></Navitem>
-                    
-                    <Navitem text="roles" link="www.google.com">
-                        <a className="navbar__link navbar__link-hidden" href="#">pages</a>
-                        <a className="navbar__link navbar__link-hidden" href="#">go in here</a>
-                        <a className="navbar__link navbar__link-hidden" href="#">thanks</a>
-                    </Navitem>
-                    <Navitem text="resources" link="www.google.com">
-                        <a className="navbar__link navbar__link-hidden" href="#">pages</a>
-                        <a className="navbar__link navbar__link-hidden" href="#">go in here</a>
-                        <a className="navbar__link navbar__link-hidden" href="#">thanks</a>
-                    </Navitem>
-                    <Navitem text="contact" link="#"></Navitem>
-                    <Navitem text="about us" link="#"></Navitem>
+                    {pages.map(function(page,page_id){
+                        console.log("oi"+page.sub_pages);
+                        return(
+                            <Navitem text={page.title} key={"page_"+page_id} link={page.link} subPages={page.sub_pages}></Navitem>
+                        )
+                    })}
                 </div>
                 <div className='navbar__buttons'>
                     <button className='navbar__button navbar__button--login' >Login</button>
@@ -62,34 +61,36 @@ const Header: FunctionComponent<TesteProps> = ({logo}) => {
 
 
 
-const Navitem: FunctionComponent<{ text: string, link:string }> = ({children,text,link}) => {
+const Navitem: FunctionComponent<{ text: string, link:string, subPages?:subPage[] }> = ({subPages,text,link}) => {
 
     const [disp, setDisp] = useState({display: 'none'});
     const [focus, setFocus] = useState({});
-    console.log(children);
-    const navigate = useNavigate();
-    const handleOnClick = useCallback((linke:string) => navigate(linke, {replace: true}), [navigate]);
-    
+/*     const navigate = useNavigate();
+    const handleOnClick = useCallback((linke:string) => navigate(linke, {replace: true}), [navigate]); */
+    console.log(subPages);
     return(
         <div className='navbar__page' 
-            onClick={() => handleOnClick(link)}
             onMouseEnter={e => {
-                if(children!==undefined){
+                if(subPages!==undefined){
                     setDisp({display: 'flex'});
                     setFocus({color: '#545454'});
                 }
             }} 
             onMouseLeave={e => {
-                if(children!==undefined){
+                if(subPages!==undefined){
                     setDisp({display: 'none'});
                     setFocus({});
                 }
             }}
         >
-            <a className="navbar__link" style={focus} href={link}>{text}</a>
+            <Link className="navbar__link" style={focus} to={link}>{text}</Link>
             <div className='navbar__hidden' style={disp}>
                 <SvgComponent></SvgComponent>
-                {children}
+                {subPages?.map(function(subPage,subPage_id){
+                    return(
+                        <Link className="navbar__link navbar__link-hidden" to={subPage.link}>{subPage.name}</Link>
+                    )
+                })}
             </div>
         </div>
     )
