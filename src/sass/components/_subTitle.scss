@@ -1,0 +1,28 @@
+.subTitle_container{
+    @include Container;
+    display: flex;
+    justify-content: space-between;
+    .subTitle_texts{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: space-between;
+        padding-left: 2.3rem;
+        .subTitle_text{
+            @include SmallText($color:$lightgrey);
+            max-width:30rem;
+        }
+        .subTitle_button{
+            @include Button(3.8rem);
+            margin: 0.9rem 0;
+        }
+    }
+    .subTitle_illustration{
+        margin-right: 13.5rem;
+        margin-top: -16.5rem;
+        .subTitle_img{
+            height:28rem;
+            
+        }
+    }
+}

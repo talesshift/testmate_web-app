@@ -96,3 +96,11 @@ body{
   justify-content: center;
   flex-wrap: wrap;
 }
+.push{
+  width:$max-width;
+  padding-left: 6rem;
+  padding-right: 3rem;
+}
+.normal{
+  width:$max-width;
+}

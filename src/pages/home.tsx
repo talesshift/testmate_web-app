@@ -216,7 +216,10 @@ function Home() {
         <div className='flexAll'> 
             <Intro image={good_company}/>
             <Trust companys={companys}/>
-            <Carousel slides={process_slides}/>
+            <div className='normal'>
+              <Carousel slides={process_slides}/>
+            </div>
+            
             <Reviews small_reviews={small_reviews} main_review={main_review}/>
             <AboutUs aboutUs_main={aboutUs_main} aboutUs_topics={aboutUs_topics}/>
             <Infos info_main={infos_main} info_topics={infos_topics} />

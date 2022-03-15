@@ -1,10 +1,14 @@
 .title_all{
     width: 100%;
+    overflow: hidden;
     .title__outerContainer{
         width: 100%;
         background-color: $purple;
         margin-top: 6.4rem;
-        padding: 5rem 0rem 8.5rem 0rem;
+        padding: 0rem 0rem 3rem 0rem;
+        height: 20rem;
+        display: flex;
+        align-items: center;
         .title_innerContainer{
             width: $max-width;
             margin-left: auto;
@@ -16,8 +20,10 @@
                 flex-direction: column;
                 justify-content: center;
                 .title_smallTitle{
-                    //anything
+                    @include BigText($color:#C4B3F7,$size:1.9rem);
                     text-decoration: none;
+                    margin-left: 1.1rem;
+
                 }
                 .title_mainTitle{
                     @include BigText($color:$whites);

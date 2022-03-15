@@ -13,6 +13,8 @@ import ReactDOM from 'react-dom'
 import App from "./App";
 import Home from "./pages/home";
 import Services from "./pages/services";
+import Rapid from "./pages/sub_services/Rapid";
+
 import Platform from "./pages/platform";
 import Resources from "./pages/resources";
 import About from "./pages/about";
@@ -30,6 +32,7 @@ render(
       <Route path="/" element={<Home />}/>
       <Route path="home" element={<Home />}/>
       <Route path="services" element={<Services />}/>
+      <Route path="services/rapid" element={<Rapid />}/>
       <Route path="platform" element={<Platform />}/>
       <Route path="aboutus" element={<About />}/>
       <Route path="contact" element={<Contact />}/>

@@ -1,0 +1,48 @@
+.who_container{
+    margin-top: 16.2rem;
+    @include Container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .who_title{
+        @include BigText($purple,2.6rem);
+    }
+    .who_items{
+        width:100%;
+        margin-top: 7rem;
+        display:flex;
+        justify-content: space-between;
+        .who_item{
+            width:19rem;
+            height:19rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            .who_itemIcon{
+                height: 7.5rem;
+                .who_itemImg{
+                    height:7.5rem;
+                }
+            }
+            .who_itemText{
+                @include SmallText($lightgrey,1.1rem);
+                font-weight: 400;
+                margin-top: 10;
+                max-width: 17rem;
+                margin-top: 2.2rem;
+                margin-bottom: auto;
+                margin-left: 0.1rem;
+                .who_itemText--bold{
+                    @include BigText($purple,1.1rem);
+                }
+            }
+            .who_itemLine{
+                height:0.2rem;
+                background-color: $purple;
+                width:100%;
+                border-radius: 6rem;
+            }
+        }
+    }
+}

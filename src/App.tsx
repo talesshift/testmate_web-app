@@ -7,11 +7,14 @@ import { Outlet, Link } from "react-router-dom";
 
 //import logo
 import logo from './images/LogoTestmate.svg';
+//import pages "backgrounds"
+import rapide from './images/services/rapid.png'
 //import "footer" icons
 import footer_topLogo from './images/home/Group 4043.png';
 import footer_topIcon_b from './images/home/Group 206.png';
 import footer_topIcon_c from './images/home/Group 207.png';
 import footer_topIcon_a from './images/home/Group 208.png';
+
 
 //-------------------------------------------------
 
@@ -20,7 +23,7 @@ import footer_topIcon_a from './images/home/Group 208.png';
 const header_pages = [
   {title:"Services",link:"/services",sub_pages:[
     {name:"Full service user testing",link:"#"},
-    {name:"Rapid user testing",link:"#"},
+    {name:"Rapid user testing",link:"/services/rapid",background:rapide},
     {name:"Videos/Surveys",link:"#"},
   ]},
   {title:"Platform",link:"#"},
@@ -91,10 +94,11 @@ const map_pages = [
 //-------------------------------------------------
 
 function App() {
-
+  const [background, setBackground] = useState("");
+  console.log(background+"oie");
   return (
-    <div>
-      <Header logo={logo} pages={header_pages}/>
+    <div style={{background: `url(${background})`}}>
+      <Header logo={logo} setBackg={setBackground} pages={header_pages}/>
       <Outlet/>
       <Footer footer_top={footer_top} map_pages={map_pages}/>
     </div>

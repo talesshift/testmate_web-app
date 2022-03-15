@@ -1,0 +1,46 @@
+$quoteHeight:18rem;
+.quote__outerContainer{
+    width:100%;
+    background-color: $purple;
+    height:$quoteHeight;
+    margin-top: 29.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .quote_innerContainer{
+        @include Container;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        padding-left: 4.9%;
+        padding-right: 9%;
+        $markHeight:6rem;
+        .quote_marks{
+            position: absolute;
+            top:calc($markHeight / -2);
+            margin-left: -1.6rem;
+            .quote_marksIcon{
+                height:$markHeight;
+            }
+        }
+        .quote_quote{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            .quote_text{
+                @include SmallText($whites,1.4rem);
+                max-width:42rem;
+            }
+        }
+        $illuHeight: 29.07rem;
+        .quote_ilustration{
+            height: $illuHeight;
+            margin-top: calc($quoteHeight - $illuHeight);
+            margin-left: -10rem;
+            .quote_ilu{
+                height: $illuHeight;
+            }
+        }
+    }
+}
