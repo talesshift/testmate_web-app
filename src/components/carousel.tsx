@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useState, useEffect } from "react";
 
 interface  slide {
     image:string;
@@ -9,12 +9,12 @@ type carouselProps ={
     slides:slide[];
 }
 
+
 const Carousel: FunctionComponent<carouselProps> = ({slides}) => {
     const n_slides =  slides.length;
     const buttons = Array.from(Array(n_slides).keys())
     const [at, setAt] = useState(0);
-    
-    
+
     return(
         <div className='process_container'>
             <div className="carousel_images">
@@ -44,8 +44,9 @@ const Carousel: FunctionComponent<carouselProps> = ({slides}) => {
                             )
                         })}
                 </div>
-                <button className="carousel_goBtn" 
+                <button className="carousel_goBtn" id="bota"
                     onClick={e => {
+                        
                         if(at<n_slides-1){ 
                             setAt(at+1)
                         }else{
@@ -55,6 +56,7 @@ const Carousel: FunctionComponent<carouselProps> = ({slides}) => {
                 ><span className={at == n_slides-1 ? "back" : "go"}>{at == n_slides-1 ? <>&laquo;</>:<>&rsaquo;</>}</span></button>
             </div>
         </div>
+        
     )
 
 }

@@ -1,16 +1,30 @@
 import React, { FunctionComponent, useState } from "react";
 
-import bubbles_icon from '../images/services/bubblesIcon.png'
+import bubbles_logo from '../images/services/Group 4759@2x.png'
 
-type bubblesProps ={
+interface bubble{
+    size:string;
+    height:string;
     text:string;
-    illustration:string;
 }
 
-const Bubbles: FunctionComponent<bubblesProps> = ({text,illustration}) => {
+type bubblesProps ={
+    title:string;
+    bubbles:bubble[];
+}
+
+const Bubbles: FunctionComponent<bubblesProps> = ({title,bubbles}) => {
     return(
-        <div className="bubbles__container">
-            
+        <div className="bubbles_container">
+            <div className="bubbles_title"></div>
+            <div className="bubbles_logo">
+                <img className="bubbles_img">{bubbles_logo}</img>
+            </div>
+            <div className="bubbles_bubbles">
+                <div className="bubbles_bubble">
+                    <div className="text"></div>
+                </div>
+            </div>
         </div>
     )
 }
