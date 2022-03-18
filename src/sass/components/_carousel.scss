@@ -6,7 +6,7 @@
 $showCarousel-duration: 0.3s;
 $showCarousel-timing: ease;
 
-.process_container{
+.carousel_container{
     max-width: $max-width;
     display: flex;
     justify-content:space-between;
@@ -17,19 +17,36 @@ $showCarousel-timing: ease;
     /* height:1200px; */
     //background-color: rgba(255, 206, 73, 0.219);
     .carousel_images{
-        height: 464px;
-        width:541px;
+        height:30.54rem;
+        width:36.06rem;
         display: flex;
         align-content: center;
         justify-content: center;
+        .carousel_imt-enter {
+            opacity: 0;
+        }
+        .carousel_imt-enter-active {
+            opacity: 1;
+            transition: opacity 1000ms;
+        }
+        .carousel_imt-exit {
+            opacity: 1;
+        }
+        .carousel_imt-exit-active {
+            opacity: 0;
+            transition: opacity 1000ms;
+        }
         .carousel_image{
+            position:absolute;
             align-self: center;
+            height:30.54rem;
         }
     }
+    
 
 
         
-        .carousel_container{
+        .carousel_content{
             //width: 39.5rem;
             width: 45%;
             margin-right: auto;
@@ -96,14 +113,14 @@ $showCarousel-timing: ease;
                 
             }
 
-            .carousel_content{
+            .carousel_texts{
                 height: 100%;
-                    .process_carouselText{
+                    .carousel_contentText{
                         padding-left: 1.3rem;
-                        .process_carouselLabels{
+                        .carousel_contentLabels{
                             width: 100%;
                             margin-top: 2rem;
-                            .process_carouselLabel{
+                            .carousel_contentLabel{
                                 color: $lightgrey;
                                 background-color: #ffffcc;
                                 display: inline-block;
@@ -121,11 +138,11 @@ $showCarousel-timing: ease;
                         h1{
                             font-family: visby-round,Nunito;
                         }
-                        .process_carouselBig{
+                        .carousel_contentBig{
                             margin-bottom: 3rem;
                             margin-top: 2.6rem;
                             
-                            .process_carouselNumber{
+                            .carousel_contentNumber{
                                 font-weight: 300;
                                 font-size: 6rem;
                                 color:$oranges;
@@ -136,7 +153,7 @@ $showCarousel-timing: ease;
                                 animation-duration: $showCarousel-duration;
                                 animation-timing-function: $showCarousel-timing;
                             }
-                            .process_carouselTitle{
+                            .carousel_contentTitle{
                                 font-weight: 600;
                                 font-size: 2.4rem;
                                 color: #6d42ed;
@@ -149,7 +166,7 @@ $showCarousel-timing: ease;
                             }
                         }
                         
-                        .process_carouselParagraph{
+                        .carousel_contentParagraph{
                             color: $lightgrey;
                             font-size: 1.1rem;
                             font-weight: 400;

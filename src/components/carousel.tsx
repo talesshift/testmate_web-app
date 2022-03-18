@@ -1,4 +1,5 @@
 import React, { FunctionComponent, useState, useEffect } from "react";
+import {CSSTransition,TransitionGroup,} from 'react-transition-group';
 
 interface  slide {
     image:string;
@@ -14,23 +15,41 @@ const Carousel: FunctionComponent<carouselProps> = ({slides}) => {
     const n_slides =  slides.length;
     const buttons = Array.from(Array(n_slides).keys())
     const [at, setAt] = useState(0);
+    const [slideIn, setSlideIn] = useState(false);
+
 
     return(
-        <div className='process_container'>
-            <div className="carousel_images">
-                <img className="carousel_image" src={slides[at].image}></img>
-            </div>
-            <div className="carousel_container">
-                <div className="carousel_content">
-                    <div className="process_carouselText">
-                        <div className="process_carouselLabels">
-                            <div className="process_carouselLabel">Our Process:</div>
+        <div className='carousel_container'>
+            {/* <div className="carousel_images"> */}
+            <TransitionGroup className="carousel_images">
+                    {slides.map(function(slide,slideid){
+                        if(slideid==at){
+                            return(
+                            
+                                <CSSTransition
+                                    key={at}
+                                    in={slideIn}
+                                    timeout={1000}
+                                    classNames="carousel_imt"
+                                >
+                                    <img className="carousel_image" src={slides[at].image}></img>
+                                </CSSTransition>
+                            )
+                        }
+                    })}
+            </TransitionGroup>
+            {/* </div> */}
+            <div className="carousel_content">
+                <div className="carousel_texts">
+                    <div className="carousel_contentText">
+                        <div className="carousel_contentLabels">
+                            <div className="carousel_contentLabel">Our Process:</div>
                         </div>
-                        <div className="process_carouselBig" >
-                            <h1 className="process_carouselNumber">{String(at+1)}.</h1>
-                            <h1 className="process_carouselTitle">{slides[at].title}</h1>
+                        <div className="carousel_contentBig" >
+                            <h1 className="carousel_contentNumber">{String(at+1)}.</h1>
+                            <h1 className="carousel_contentTitle">{slides[at].title}</h1>
                         </div>
-                        <p className="process_carouselParagraph">{slides[at].text}</p>                        
+                        <p className="carousel_contentParagraph">{slides[at].text}</p>                        
                     </div>
                 </div>
                 <div className="carousel_lines">
@@ -46,7 +65,6 @@ const Carousel: FunctionComponent<carouselProps> = ({slides}) => {
                 </div>
                 <button className="carousel_goBtn" id="bota"
                     onClick={e => {
-                        
                         if(at<n_slides-1){ 
                             setAt(at+1)
                         }else{
