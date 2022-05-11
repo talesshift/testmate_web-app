@@ -11,9 +11,6 @@ npm install
 npm run dev
 ```
 
-
-**TIP:** to remove the wireframe in the background `inspect element > body > (remove)background-image`
-
 Home-page preview:
 ![image](https://user-images.githubusercontent.com/31869464/167901269-a4d055f0-aada-41a2-91ea-392f651743be.png)
 
