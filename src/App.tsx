@@ -23,7 +23,7 @@ import footer_topIcon_a from './images/home/Group 208.png';
 const header_pages = [
   {title:"Services",link:"/services",sub_pages:[
     {name:"Full service user testing",link:"#"},
-    {name:"Rapid user testing",link:"/services/rapid",background:rapide},
+    {name:"Rapid user testing",link:"/services/rapid"},
     {name:"Videos/Surveys",link:"#"},
   ]},
   {title:"Platform",link:"#"},
